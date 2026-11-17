@@ -47,12 +47,15 @@ If PowerShell blocks activation, use the full `.venv` interpreter path below.
    `.venv\Scripts\python.exe`.
 3. Open an algorithm file, such as `src/dsa_python/heap_sort.py`, and set a
    breakpoint beside a line inside the algorithm.
-4. Press F5 and choose **Debug current algorithm file**. Every supplied
-   algorithm has a `main()` example at the bottom, so the selected file runs by
-   itself. Use F10 to step over, F11 to step into, and the Variables/Watch
-   panels to inspect values.
+4. Press F5 and choose **Debug active Python file (F5)**. The debugger uses the
+   file currently open in the editor. Every supplied algorithm has a `main()`
+   example at the bottom, so only that file runs. Use F10 to step over, F11 to
+   step into, and the Variables/Watch panels to inspect values.
 5. Use **Debug all tests** to step through tests. The Testing panel also supports
    running and debugging individual tests.
+
+`main.py` intentionally runs all algorithm examples. Open it and press F5 only
+when you want the complete project demo.
 
 When you add a new algorithm, include the same `main()` pattern so the file can
 be run and debugged independently:

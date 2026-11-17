@@ -2,18 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run DSA demo",
-            "pythonArgs": ["-B", "-X", "frozen_modules=off"],
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${workspaceFolder}/main.py",
-            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
-            "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal",
-            "justMyCode": true
-        },
-        {
-            "name": "Debug current algorithm file",
+            "name": "Debug active Python file (F5)",
             "pythonArgs": ["-B", "-X", "frozen_modules=off"],
             "type": "debugpy",
             "request": "launch",
