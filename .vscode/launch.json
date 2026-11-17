@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "Run DSA demo",
-            "pythonArgs": ["-X", "frozen_modules=off"],
+            "pythonArgs": ["-B", "-X", "frozen_modules=off"],
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/main.py",
@@ -13,19 +13,22 @@
             "justMyCode": true
         },
         {
-            "name": "Debug current Python file",
-            "pythonArgs": ["-X", "frozen_modules=off"],
+            "name": "Debug current algorithm file",
+            "pythonArgs": ["-B", "-X", "frozen_modules=off"],
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "python": "${workspaceFolder}/.venv/Scripts/python.exe",
             "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
             "console": "integratedTerminal",
             "justMyCode": true
         },
         {
             "name": "Debug all tests",
-            "pythonArgs": ["-X", "frozen_modules=off"],
+            "pythonArgs": ["-B", "-X", "frozen_modules=off"],
             "type": "debugpy",
             "request": "launch",
             "module": "unittest",

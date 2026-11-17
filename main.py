@@ -1,6 +1,7 @@
 """Run a small demo of the algorithms in this project."""
 
 from dsa_python.searching import binary_search, linear_search
+from dsa_python.heap_sort import max_heap_sort
 from dsa_python.sorting import bubble_sort
 from dsa_python.stack import Stack
 
@@ -14,6 +15,7 @@ def main() -> None:
 
     unsorted_numbers = [7, 2, 10, 4, 2]
     print(f"Bubble sort: {unsorted_numbers} -> {bubble_sort(unsorted_numbers)}")
+    print(f"Max-heap sort: {unsorted_numbers} -> {max_heap_sort(unsorted_numbers)}")
 
     stack: Stack[str] = Stack()
     stack.push("first")

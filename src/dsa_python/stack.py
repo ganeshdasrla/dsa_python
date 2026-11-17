@@ -28,3 +28,17 @@ class Stack(Generic[T]):
 
     def __len__(self) -> int:
         return len(self._items)
+
+
+def main() -> None:
+    """Run an example when this file is executed directly."""
+    stack: Stack[str] = Stack()
+    stack.push("first")
+    stack.push("second")
+    print(f"Top item: {stack.peek()}")
+    print(f"Popped: {stack.pop()}")
+    print(f"Items remaining: {len(stack)}")
+
+
+if __name__ == "__main__":
+    main()

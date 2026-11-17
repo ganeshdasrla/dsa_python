@@ -45,15 +45,27 @@ If PowerShell blocks activation, use the full `.venv` interpreter path below.
    extensions if prompted.
 2. Run **Python: Select Interpreter** from Ctrl+Shift+P and select
    `.venv\Scripts\python.exe`.
-3. Set a breakpoint beside a line number in `src/dsa_python/searching.py`,
-   for example on `middle = ...`.
-4. Press F5 and choose **Run DSA demo**. Use F10 to step over, F11 to step into,
-   and the Variables/Watch panels to inspect values.
+3. Open an algorithm file, such as `src/dsa_python/heap_sort.py`, and set a
+   breakpoint beside a line inside the algorithm.
+4. Press F5 and choose **Debug current algorithm file**. Every supplied
+   algorithm has a `main()` example at the bottom, so the selected file runs by
+   itself. Use F10 to step over, F11 to step into, and the Variables/Watch
+   panels to inspect values.
 5. Use **Debug all tests** to step through tests. The Testing panel also supports
    running and debugging individual tests.
 
-**Debug current Python file** is available for standalone scripts. Algorithm
-modules only define functions; launch the demo or a test to call them.
+When you add a new algorithm, include the same `main()` pattern so the file can
+be run and debugged independently:
+
+```python
+def main() -> None:
+    values = [4, 1, 3, 2]
+    print(your_algorithm(values))
+
+
+if __name__ == "__main__":
+    main()
+```
 
 ## Project structure
 
@@ -61,6 +73,7 @@ modules only define functions; launch the demo or a test to call them.
 src/dsa_python/
     searching.py       # linear search and binary search
     sorting.py         # bubble sort
+    heap_sort.py       # max-heap sort; runnable debugging example
     stack.py           # generic LIFO stack
 tests/                 # unittest examples and edge cases
 docs/learning-path.md  # topic roadmap and debugging exercise

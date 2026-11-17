@@ -28,3 +28,16 @@ def binary_search(values: list[int], target: int) -> int:
             right = middle - 1
 
     return -1
+
+
+def main() -> None:
+    """Run examples when this file is executed directly."""
+    values = [2, 4, 7, 10, 15, 21]
+    target = 10
+    print(f"Values: {values}")
+    print(f"Linear search for {target}: index {linear_search(values, target)}")
+    print(f"Binary search for {target}: index {binary_search(values, target)}")
+
+
+if __name__ == "__main__":
+    main()

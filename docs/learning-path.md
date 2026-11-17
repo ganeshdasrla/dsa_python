@@ -7,7 +7,7 @@ test empty and boundary cases, then write down time and space complexity.
 | --- | --- | --- |
 | 1 | Python basics and Big O | Lists, loops, functions, dictionaries; compare O(1), O(n), O(log n) |
 | 2 | Searching | Trace linear and binary searches; implement first occurrence |
-| 3 | Sorting | Trace bubble sort; add insertion sort and merge sort |
+| 3 | Sorting | Trace bubble and max-heap sort; add insertion sort and merge sort |
 | 4 | Arrays and strings | Two sum, two pointers, sliding window, palindrome |
 | 5 | Stack and queue | Use the stack; balanced brackets; queue using collections.deque |
 | 6 | Linked lists | Insert, delete, reverse, find the middle |

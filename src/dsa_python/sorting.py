@@ -17,3 +17,14 @@ def bubble_sort(values: list[int]) -> list[int]:
         if not swapped:
             break
     return result
+
+
+def main() -> None:
+    """Run an example when this file is executed directly."""
+    values = [7, 2, 10, 4, 2]
+    print(f"Before: {values}")
+    print(f"After:  {bubble_sort(values)}")
+
+
+if __name__ == "__main__":
+    main()
